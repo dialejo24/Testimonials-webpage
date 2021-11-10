@@ -36,7 +36,8 @@ body{
     display: grid;
     gap:1.5em;
     width:90%;
-    max-width: 71.875em;
+    grid-template-columns: repeat(auto-fit, minmax(18em,22em));
+    justify-content: center;
 }
 
 .section{
@@ -132,4 +133,31 @@ body{
 }
 .kira__section > p{
     color:hsl(217,19%,35%,0.7);
+}
+
+@media(min-width:68.75em){
+    .main{
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 71.875em;
+    }
+    .daniel__section{
+        grid-column: span 2;
+    }
+    .patrick__section{
+        grid-column: span 2;
+    }
+    .kira__section{
+        grid-row: 1/span 2;
+        grid-column: 4/5;
+    }
+    .quotation{
+        right:5em;
+    }
+}
+/*This media query deletes the padding that prevents the elements to be full-height and touch the top and
+bottom edge when the screen is small and the layout is long vertically*/
+@media(min-width:68.75em) and (min-height:50em){
+    body{
+        padding-block: initial;
+    }
 }
