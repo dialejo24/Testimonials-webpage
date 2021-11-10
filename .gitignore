@@ -16,5 +16,10 @@
 
 .prettierignore
 
-images
+/images/favicon-32x32.png
+/images/image-daniel.jpg
+/images/image-jeanette.jpg
+/images/image-jonathan.jpg
+/images/image-kira.jpg
+/images/image-patrick.jpg
 design
